@@ -1,0 +1,34 @@
+Conclusión del Proyecto de Red Neuronal para Reconocimiento de Dígitos (MNIST)
+Importación de Librerías:
+
+Utilizamos TensorFlow y Keras para construir y entrenar nuestra red neuronal.
+Matplotlib se usó para visualizar los resultados del entrenamiento.
+Carga y Preprocesamiento de Datos:
+
+Cargamos el conjunto de datos MNIST, que contiene imágenes de dígitos escritos a mano.
+Las imágenes se normalizaron a un rango de 0 a 1 y se reorganizaron para tener una forma adecuada para la entrada de la red neuronal.
+Las etiquetas se convirtieron a una codificación one-hot para su uso en la clasificación multiclase.
+Definición del Modelo:
+
+Creamos un modelo secuencial de Keras.
+Añadimos capas convolucionales (Conv2D) y de pooling (MaxPooling2D) para extraer características importantes de las imágenes.
+Utilizamos una capa de aplanado (Flatten) para convertir la salida de las capas convolucionales en un vector de una dimensión.
+Añadimos capas densas (Dense) para realizar la clasificación final.
+Compilación del Modelo:
+
+Especificamos el optimizador Adam, la función de pérdida de entropía cruzada categórica y la métrica de precisión.
+Entrenamiento del Modelo:
+
+Entrenamos el modelo durante 5 épocas con un tamaño de lote de 64, utilizando el 20% de los datos de entrenamiento para la validación.
+El modelo ajustó sus pesos en cada época para minimizar la pérdida y mejorar la precisión en los datos de entrenamiento y validación.
+Evaluación del Modelo:
+
+Evaluamos el rendimiento del modelo en el conjunto de prueba, obteniendo una precisión que indica cuán bien el modelo puede generalizar a datos no vistos previamente.
+Visualización de Resultados:
+
+Graficamos la precisión y la pérdida en entrenamiento y validación a lo largo de las épocas para observar el comportamiento del modelo.
+Las gráficas mostraron cómo el modelo mejoró su rendimiento con cada época y nos ayudaron a identificar posibles problemas como el sobreajuste.
+Resultado Final
+El modelo de red neuronal convolucional entrenado en este proyecto logró una alta precisión en el conjunto de prueba de MNIST, demostrando su capacidad para reconocer dígitos escritos a mano con gran exactitud. Los gráficos de precisión y pérdida nos proporcionaron una visión clara de la eficacia del entrenamiento y el rendimiento del modelo en datos no vistos previamente.
+
+Este proyecto proporciona una base sólida para entender cómo construir, entrenar y evaluar un modelo de red neuronal utilizando TensorFlow y Keras, y se puede expandir y adaptar para resolver otros problemas de clasificación de imágenes.
